@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<locale.h>
+
+#define L 3
+#define P 2
+
+/*
+ALUNO: JERôNIMO RIBEIRO COSTA NETO    n2120524
+Uma escola deseja saber se existem alunos cursando, simultaneamente, as disciplinas Lógica e Linguagem de Programação. 
+Coloque os números das matriculas dos alunos que cursam Lógica em um vetor, no máximo quinze alunos. Coloque os números das matriculas 
+dos alunos que cursam Linguagem de Programação em outro vetor, no máximo dez alunos. Mostre o número das matriculas que aparecem nos dois vetores.
+*/
+
+
+main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	
+	int log[L];
+	int prog[P];
+    int x, y;
+    
+    printf("\nDigite o número de matricula: ");
+    for(x=0; x<L; x++)
+	{
+     scanf("%i",&log[x]);
+      }
+	
+   printf("\nDigite o número de matricula: ");
+   for(y=0; y<P; y++)
+   {
+   	 scanf("%i",&prog[y]);
+      }
+	
+   printf("\nAlunos que cursam as duas disciplinas ");
+   for(x=0; x<L; x++)
+    {
+     	for(y=0; y<L; y++)
+         {
+         	if(log[x]==prog[y])
+         	 {
+         	 	printf("\n[%i]",log[x]);
+			  }
+		 }
+    }
+	
+}
